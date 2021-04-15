@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name_en');
             $table->string('name_ar');
-            $table->bigInteger('mobile');
+            $table->string('mobile');
             $table->timestamp('date_of_birth');
 
             $table->string('password');

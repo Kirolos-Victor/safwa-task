@@ -38,10 +38,10 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="date_of_birth" class="col-md-4 col-form-label text-md-right">Date of birth</label>
+                            <label for="hijri-date-input" class="col-md-4 col-form-label text-md-right">Date of birth</label>
 
                             <div class="col-md-6">
-                                <input id="date_of_birth" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"  autocomplete="date of birth">
+                                <input id="hijri-date-input" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"  autocomplete="date of birth">
 
                                 @error('date_of_birth')
                                 <span class="invalid-feedback" role="alert">
@@ -54,7 +54,7 @@
                             <label for="mobile" class="col-md-4 col-form-label text-md-right">Mobile No.</label>
 
                             <div class="col-md-6">
-                                <input id="mobile" type="text" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}"  autocomplete="mobile">
+                                <input  pattern="[0-9]*" id="mobile" type="text" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}"  autocomplete="mobile">
 
                                 @error('mobile')
                                     <span class="invalid-feedback" role="alert">
