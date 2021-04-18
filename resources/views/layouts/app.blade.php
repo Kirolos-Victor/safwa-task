@@ -19,6 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
+    @yield('css')
 
 </head>
 <body>

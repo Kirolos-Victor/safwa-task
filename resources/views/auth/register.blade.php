@@ -1,10 +1,19 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+       Laravel
+    </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
 
-@section('content')
+</head>
+<body class="bg-light">
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card mt-5">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -41,7 +50,7 @@
                             <label for="hijri-date-input" class="col-md-4 col-form-label text-md-right">Date of birth</label>
 
                             <div class="col-md-6">
-                                <input id="hijri-date-input" type="date" class="form-control @error('date_of_birth') is-invalid @enderror" name="date_of_birth" value="{{ old('date_of_birth') }}"  autocomplete="date of birth">
+                                <input type='text' class="form-control" id="hijri-date-input" name="date_of_birth"/>
 
                                 @error('date_of_birth')
                                 <span class="invalid-feedback" role="alert">
@@ -54,7 +63,7 @@
                             <label for="mobile" class="col-md-4 col-form-label text-md-right">Mobile No.</label>
 
                             <div class="col-md-6">
-                                <input  pattern="[0-9]*" id="mobile" type="text" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}"  autocomplete="mobile">
+                                <input  id="mobile" type="text" class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}"  autocomplete="mobile">
 
                                 @error('mobile')
                                     <span class="invalid-feedback" role="alert">
@@ -100,4 +109,17 @@
         </div>
     </div>
 </div>
-@endsection
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/bootstrap-hijri-datetimepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#hijri-date-input").hijriDatePicker();
+        });
+    </script>
+</body>
+</html>
